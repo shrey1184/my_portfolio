@@ -100,7 +100,7 @@ body {
   top: 0px; /* match your top navbar height */
   left: 0;
   height: calc(100vh);
-  width: 30px;
+  width: 50px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -129,7 +129,7 @@ body {
 }
 
 .sidebar a:hover {
-  color: white;
+  color: #3b82f6;
 }
 
 .bottom-bar {
@@ -140,11 +140,31 @@ body {
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.20rem 1.5rem;
+  justify-content: flex-start;
+  padding: 0;
   border: 0.5px solid #ffffff;
   border-radius: 0.27rem;
   border-top-right-radius: 0rem;
   background: rgba(17, 18, 17, 0.7);
   z-index: 1000;
+}
+
+.search-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(59, 130, 246, 0.7); /* Tailwind blue-500 with transparency */
+  border: 0.5px solid #ffffff;
+  border-bottom-left-radius: 0.27rem;
+  color: #fff;
+  opacity: 0.85;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, opacity 0.2s;
+  box-sizing: border-box;
+}
+.search-btn:hover {
+  color: rgba(59, 130, 246, 0.7); /* Tailwind blue-500 with transparency */
+  opacity: 1.0;
 }
