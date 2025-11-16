@@ -1,0 +1,17 @@
+.App {
+  min-height: 100vh;
+  background-color: #111211;
+}
+
+main {
+  color: #ffffff;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #cccccc;
+}
