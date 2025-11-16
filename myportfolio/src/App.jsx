@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import './App.css'
+import BottomBar from './components/Bottombar';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
 
       </div>        
       <Sidebar />
+      <BottomBar />
     </div>
   );
 }
