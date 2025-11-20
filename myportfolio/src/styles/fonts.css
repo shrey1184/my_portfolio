@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "StarCrush";
+  src: url("../assets/Star Crush.otf") format("opentype"),
+       url("../assets/Star Crush.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

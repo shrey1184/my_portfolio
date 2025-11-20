@@ -17,25 +17,6 @@ export function AnimatedSun() {
             shadow-[0_0_80px_20px_rgba(255,100,150,0.3)]
         "></div>
 
-        {/* Scanline Animation */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(18)].map((_, i) => (
-            <div
-              key={i}
-              className="
-                w-full 
-                bg-black/40 
-                absolute left-0 
-                animate-scanline
-              "
-              style={{
-                top: `${120 + i * 18}px`,
-                height: `${6 - Math.abs(i - 8) * 0.3}px`,
-                animationDelay: `${i * 0.05}s`,
-              }}
-            />
-          ))}
-        </div>
       </div>
     </div>
   );
