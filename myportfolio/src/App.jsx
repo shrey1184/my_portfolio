@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import BottomBar from './components/Bottombar'
+import ContactFAB from './components/ContactFAB'
 import { RetroGrid } from "./components/ui/retro-grid.jsx";
 import { AnimatedSun } from "./components/ui/animated-sun.jsx";
 import './App.css'
@@ -72,7 +73,10 @@ function App() {
         </div>
 
         <Sidebar />
+        <ContactFAB />
+
         <BottomBar />
+
       </div>
     </>
   );
