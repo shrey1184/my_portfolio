@@ -10,6 +10,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --animate-grid: grid 15s linear infinite;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,7 +35,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,7 +51,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
@@ -100,17 +101,14 @@ body {
   top: 0px; /* match your top navbar height */
   left: 0;
   height: calc(100vh);
-  width: 50px;
+  width: 40px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  gap: 28px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 0.20rem 1.5rem;
+  gap: 28px;
+  padding: 0.20rem 0;
   border: 0.5px solid #ffffff;
   border-radius: 0.27rem;
   border-top-right-radius: 0rem;
@@ -137,7 +135,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -150,8 +148,8 @@ body {
 }
 
 .search-btn {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: rgba(59, 130, 246, 0.7); /* Tailwind blue-500 with transparency */
   border: 0.5px solid #ffffff;
   border-bottom-left-radius: 0.27rem;
@@ -168,3 +166,12 @@ body {
   color: rgba(59, 130, 246, 0.7); /* Tailwind blue-500 with transparency */
   opacity: 1.0;
 }
+@keyframes grid {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
