@@ -15,6 +15,20 @@ function App() {
 
       {/* ⭐ Your App content with RetroGrid ABOVE sun */}
       <div className="App" style={{ position: 'relative' }}>
+        {/* New box with 100% width and height, white border, no fill */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          borderRadius: '0.5rem',
+          background: 'transparent',
+          pointerEvents: 'none',
+          zIndex: 10,
+        }}></div>
+        
         <AnimatedSun />
         <RetroGrid />
         <Navbar />
@@ -27,7 +41,7 @@ function App() {
             alignItems: 'center',
             height: '80vh',
             textAlign: 'center',
-            transform: 'translateY(40px)',
+            transform: 'translateY(70px)',
           }}
         >
           <div style={{

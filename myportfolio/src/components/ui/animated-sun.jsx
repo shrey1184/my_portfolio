@@ -1,7 +1,7 @@
 export function AnimatedSun() {
   return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" style={{ transform: 'translateY(-100px)' }}>
-      <div className="relative w-[600px] h-[600px] opacity-70">
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" style={{ transform: 'translateY(0px)' }}>
+      <div className="relative w-[750px] h-[750px] opacity-70">
 
         {/* Glowing Circle */}
         <div className="

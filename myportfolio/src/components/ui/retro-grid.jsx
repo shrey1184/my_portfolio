@@ -2,7 +2,7 @@ export function RetroGrid() {
   return (
     <div style={{
       position: 'absolute',
-      top: 180,
+      top: 240,
       left: 0,
       right: 0,
       bottom: 0,
