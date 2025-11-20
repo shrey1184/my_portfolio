@@ -22,7 +22,8 @@ export function RetroGrid() {
           height: '200%',
           bottom: '-50%',
           left: '-50%',
-          background: `
+  backgroundColor: '#111211',
+          backgroundImage: `
             linear-gradient(to right, rgba(59, 130, 246, 1) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(59, 130, 246, 1) 1px, transparent 1px)
           `,
