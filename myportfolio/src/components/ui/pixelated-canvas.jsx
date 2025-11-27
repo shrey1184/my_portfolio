@@ -1,7 +1,9 @@
 import React from "react";
+// removed invalid import of image-removebg-preview.png — import images using a valid relative path
+// e.g. `import bg from "../../assets/image-removebg-preview.png";` or use the `src` prop / require() where needed
 
 export const PixelatedCanvas = ({
-  src,
+  src = require("../../assets/pixelated-canvas-img.png"),
   width = 400,
   height = 500,
   cellSize = 3,

@@ -1,5 +1,7 @@
 // AboutSection.jsx
 import { PixelatedCanvas } from './ui/pixelated-canvas';
+import { PixelatedCanvasDemo } from './PixelatedCanvasDemo';
+import imageRemoveBgPreview from '../assets/image-removebg-preview.png';
 
 export default function AboutSection() {
   return (
@@ -25,7 +27,7 @@ export default function AboutSection() {
         zIndex: 2,
       }}>
         <PixelatedCanvas
-          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop"
+          src={imageRemoveBgPreview}
           width={300}
           height={400}
           cellSize={4}
