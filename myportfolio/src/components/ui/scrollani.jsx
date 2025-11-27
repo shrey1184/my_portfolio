@@ -1,19 +1,35 @@
 // Add demo component for AboutSection
 export function ScrollBasedVelocityDemo() {
-	return (
-		<div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-			<ScrollVelocityContainer className="text-4xl font-bold tracking-[-0.02em] md:text-7xl md:leading-[5rem]">
-				<ScrollVelocityRow baseVelocity={20} direction={1}>
-					Velocity Scroll
-				</ScrollVelocityRow>
-				<ScrollVelocityRow baseVelocity={20} direction={-1}>
-					Velocity Scroll
-				</ScrollVelocityRow>
-			</ScrollVelocityContainer>
-			<div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-			<div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
-		</div>
-	)
+				return (
+					<div className="w-full flex justify-center items-center" style={{ position: 'relative', zIndex: 10, width: '100%' }}>
+						<div style={{
+							border: '1px solid rgba(255,255,255,0.2)',
+							borderRadius: '0.5rem',
+							background: 'rgba(17,18,17,0.4)',
+							backdropFilter: 'blur(10px)',
+							WebkitBackdropFilter: 'blur(10px)',
+							boxShadow: '0 8px 32px 0 rgba(0,0,0,0.37)',
+							padding: '1.0rem 0rem',
+							width: '100%',
+							maxWidth: '100%',
+							position: 'relative',
+							overflow: 'hidden',
+						}}>
+							<div className="relative flex w-full flex-col items-center justify-center overflow-hidden" style={{ width: '100%' }}>
+								<ScrollVelocityContainer className="w-full text-xl font-bold tracking-tight md:text-3xl md:leading-10">
+									<ScrollVelocityRow baseVelocity={20} direction={1}>
+										Shrey Shrivastava_ 
+									</ScrollVelocityRow>
+									<ScrollVelocityRow baseVelocity={20} direction={-1}>
+										Shrey Shrivastava_
+									</ScrollVelocityRow>
+								</ScrollVelocityContainer>
+								<div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+								<div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+							</div>
+						</div>
+					</div>
+				)
 }
 "use client"
 
