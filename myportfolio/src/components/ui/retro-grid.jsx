@@ -22,15 +22,18 @@ export function RetroGrid() {
           height: '200%',
           bottom: '-50%',
           left: '-50%',
-  backgroundColor: '#111211',
+          background: 'rgba(0, 0, 0, 0.85)',
+          backdropFilter: 'blur(15px)',
+          WebkitBackdropFilter: 'blur(15px)',
           backgroundImage: `
-            linear-gradient(to right, rgba(59, 130, 246, 1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(59, 130, 246, 1) 1px, transparent 1px)
+            linear-gradient(to right, rgba(59, 130, 246, 0.8) 2px, transparent 2px),
+            linear-gradient(to bottom, rgba(59, 130, 246, 0.8) 2px, transparent 2px)
           `,
           backgroundSize: '80px 80px',
           transform: 'rotateX(60deg)',
           animation: 'grid 0.5s linear infinite',
           transformOrigin: 'center center',
+          boxShadow: 'inset 0 0 100px rgba(59, 130, 246, 0.15)',
         }}
       />
       <style>

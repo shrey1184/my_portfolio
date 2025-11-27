@@ -1,8 +1,18 @@
 .App {
   min-height: 100vh;
-  background-color: #111211;
+  background-color: transparent;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
 }
 
 main {
