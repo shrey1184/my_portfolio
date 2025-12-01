@@ -83,6 +83,24 @@ export const StarsBackground = ({
 
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Volumetric light / nebula background
+const gradient = ctx.createRadialGradient(
+  canvas.width / 2,
+  canvas.height / 2,
+  canvas.width * 0.1,
+  canvas.width / 2,
+  canvas.height / 2,
+  canvas.width * 0.8
+);
+
+  gradient.addColorStop(0, "rgba(20, 30, 60, 0.2)");   // bright center glow
+  gradient.addColorStop(0.4, "rgba(10, 15, 35, 0.2)");  // mid haze
+  gradient.addColorStop(1, "rgba(0, 0, 15, 0.2)");     // dark edges
+
+ctx.fillStyle = gradient;  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
       stars.forEach((star) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);

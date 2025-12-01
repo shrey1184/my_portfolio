@@ -14,7 +14,10 @@ export default function Sidebar() {
       <a href="#home" onClick={(e) => scrollToSection(e, 'home')}>home</a>
       <a href="#about" onClick={(e) => scrollToSection(e, 'about')}>about</a>
       <a href="#projects" onClick={(e) => scrollToSection(e, 'projects')}>projects</a>
+      <a href="#achievements" onClick={(e) => scrollToSection(e, 'achievements')}>achievements</a>
       <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>contact</a>
+
+
     </div>
   );
 }

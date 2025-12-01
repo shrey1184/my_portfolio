@@ -2,7 +2,7 @@ export function RetroGrid() {
   return (
     <div style={{
       position: 'absolute',
-      top: 240,
+      top: 60,
       left: 0,
       right: 0,
       bottom: 0,
@@ -11,9 +11,12 @@ export function RetroGrid() {
       overflow: 'hidden',
       pointerEvents: 'none',
       perspective: '1000px',
+      perspectiveOrigin: '50% 100%',
       display: 'flex',
       alignItems: 'flex-end',
       justifyContent: 'center',
+      filter: 'drop-shadow(0 0 25px rgba(59, 130, 246, 0.4))',
+
     }}>
       <div
         style={{

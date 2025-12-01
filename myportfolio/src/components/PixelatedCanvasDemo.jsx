@@ -5,7 +5,7 @@ export function PixelatedCanvasDemo() {
   return (
     <div className="mx-auto mt-8 flex w-full items-center justify-center">
       <PixelatedCanvas
-        src="/home/shrey/Documents/Portfolio/image-removebg-preview.png"
+        src="/home/shrey/Documents/Portfolio/myportfolio/src/assets/_DSC1975.jpg"
         width={800}
         height={600}
         cellSize={4}
