@@ -66,10 +66,10 @@ export default function SpaceshipSection() {
     if (!el) return;
 
     // initial placement - positioned at center of home section, shifted right
-    placeOverlayOverTarget(el, '#home', { anchor: 'center', offset: [350, 80] });
+    placeOverlayOverTarget(el, '#home', { anchor: 'center', offset: [330, 160] });
 
     const onScrollResize = () => {
-      placeOverlayOverTarget(el, '#home', { anchor: 'center', offset: [350, 80] });
+      placeOverlayOverTarget(el, '#home', { anchor: 'center', offset: [330, 160] });
     };
 
     window.addEventListener('scroll', onScrollResize, { passive: true });

@@ -64,7 +64,7 @@ export default function HomeSection() {
         background: 'rgba(17, 18, 17, 0.4)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+        boxShadow: '0 8px 32px 0 rgba(59, 130, 246, 0.09)',
         transform: 'scale(1)',
         position: 'relative',
         zIndex: 2,

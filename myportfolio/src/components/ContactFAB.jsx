@@ -24,6 +24,7 @@ export default function ContactFAB() {
           paddingTop: '0.75rem', 
           paddingBottom: '0.75rem', 
           borderRadius: '0.5rem',
+          boxShadow: '0 8px 32px 0 rgba(59, 130, 246, 0.2)',
           overflow: 'hidden',
           whiteSpace: 'nowrap',
           backgroundColor: open ? 'rgba(246, 65, 108, 0.9)' : 'rgba(0, 0, 0, 0.6)',
