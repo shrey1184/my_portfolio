@@ -16,12 +16,12 @@ export function ScrollBasedVelocityDemo() {
 							overflow: 'hidden',
 						}}>
 							<div className="relative flex w-full flex-col items-center justify-center overflow-hidden" style={{ width: '100%' }}>
-								<ScrollVelocityContainer className="w-full text-xl font-bold tracking-tight md:text-3xl md:leading-10">
+								<ScrollVelocityContainer className="w-full text-xl font-bold tracking-tight md:text-3xl md:leading-10" style={{ color: 'rgba(255, 255, 255, 0.1)' }}>
 									<ScrollVelocityRow baseVelocity={20} direction={1}>
-										Shrey Shrivastava_ 
+										Design Develop Create Edit Render Optimize 
 									</ScrollVelocityRow>
 									<ScrollVelocityRow baseVelocity={20} direction={-1}>
-										Shrey Shrivastava_
+										Design Develop Create Edit Render Optimize
 									</ScrollVelocityRow>
 								</ScrollVelocityContainer>
 								<div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
@@ -36,6 +36,7 @@ export function ScrollBasedVelocityDemo() {
 import React, { useContext, useEffect, useRef, useState } from "react"
 import {
 	motion,
+	rgba,
 	useAnimationFrame,
 	useMotionValue,
 	useScroll,

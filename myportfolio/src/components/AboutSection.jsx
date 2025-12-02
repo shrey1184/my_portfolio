@@ -3,7 +3,10 @@ import { PixelatedCanvas } from './ui/pixelated-canvas';
 import { PixelatedCanvasDemo } from './PixelatedCanvasDemo';
 import imageRemoveBgPreview from '../assets/image-removebg-preview.png';
 import { ScrollBasedVelocityDemo } from './ui/scrollani';
+import { AsciiScene } from './ascii-scene';
 
+// Import video - adjust path as needed
+const videoPath = '/119967-719443875.mp4';
 
 export default function AboutSection() {
   return (
@@ -33,6 +36,20 @@ export default function AboutSection() {
           gap: '2rem',
           width: '100%',
         }}>
+          {/* ASCII Scene Box - LEFT SIDE */}
+          <div style={{
+            position: 'absolute',
+            top: '18%',
+            left: '-20%',
+            width: '800px',
+            height: '800px',
+            zIndex: 2,
+            background: 'transparent',
+            mixBlendMode: 'screen',
+          }}>
+            <AsciiScene videoSrc={videoPath} />
+          </div>
+
           {/* Pixelated Canvas Box */}
           <div style={{
             border: '1px solid rgba(255, 255, 255, 0.2)',
@@ -44,7 +61,7 @@ export default function AboutSection() {
             boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
             position: 'absolute',
             top: '10%',
-            left: '65%',
+            right: '5%',
             zIndex: 2,
           }}>
             <PixelatedCanvas
