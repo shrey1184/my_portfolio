@@ -39,8 +39,8 @@ export default function AboutSection() {
           {/* ASCII Scene Box - LEFT SIDE */}
           <div style={{
             position: 'absolute',
-            top: '18%',
-            left: '-20%',
+            top: '-2%',
+            left: '-9%',
             width: '800px',
             height: '800px',
             zIndex: 2,
@@ -60,14 +60,14 @@ export default function AboutSection() {
             WebkitBackdropFilter: 'blur(10px)',
             boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
             position: 'absolute',
-            top: '10%',
-            right: '5%',
+            top: '0%',
+            right: '20%',
             zIndex: 2,
           }}>
             <PixelatedCanvas
               src={imageRemoveBgPreview}
-              width={300}
-              height={400}
+              width={225}
+              height={300}
               cellSize={4}
               dotScale={0.9}
               shape="square"
@@ -92,7 +92,7 @@ export default function AboutSection() {
             boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
             maxWidth: '900px',
             position: 'absolute',
-            top: '35%',
+            top: '15%',
             zIndex: 1,
           }}>
           <h2 style={{ 
