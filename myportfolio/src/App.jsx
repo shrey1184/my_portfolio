@@ -7,6 +7,7 @@ import { ShootingStars } from "./components/ui/shooting-stars.jsx";
 import HomeSection from './components/HomeSection'
 import AboutSection from './components/AboutSection'
 import ProjectsSection from './components/ProjectsSection'
+import AchievementsSection from './components/sections/AchievementsSection'
 import ContactSection from './components/ContactSection'
 import SpaceshipSection from './components/SpaceshipSection'
 import './App.css'
@@ -58,6 +59,7 @@ function App() {
         <HomeSection />
         <AboutSection />
         <ProjectsSection />
+        <AchievementsSection />
         <ContactSection />
 
         <Sidebar />

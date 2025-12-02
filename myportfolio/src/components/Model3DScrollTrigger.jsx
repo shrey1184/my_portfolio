@@ -16,13 +16,14 @@ function SpaceshipModel() {
     <primitive
       ref={mRef}
       object={scene}
-      scale={0.3}           // keep it small
-      position={[0, -0.6, 0]} // slightly lower in its canvas for nicer framing
+      scale={0.43}           // keep it small
+      position={[0.4, -1.2, 0.1]} // moved down on y-axis
+      rotation={[0.2, -0.6, -0.7]}     // rotated left on z-axis (negative = counterclockwise)
     />
   );
 }
 
-export default function Model3DScrollTrigger({ style, className, overlayRef }) {
+export default function Model3DScrollTrigger({ style, className, overlayRef, top = '0', left = '50%', right, bottom }) {
   // overlayRef (optional) is a ref passed from parent to move the DOM overlay on scroll
   const internalRef = useRef(null);
   const containerRef = overlayRef || internalRef;
@@ -49,9 +50,12 @@ export default function Model3DScrollTrigger({ style, className, overlayRef }) {
       className={`spaceship-overlay ${className || ''}`}
       style={{
         position: 'fixed',    // fixed overlay so it doesn't affect layout
-        left: '50%',          // center horizontally by default
-        transform: 'translate(-50%, 0)',
-        width: '360px',       // size: tweak as desired
+        top: top,             // customizable top position
+        left: left,           // customizable left position
+        right: right,         // customizable right position
+        bottom: bottom,       // customizable bottom position
+        transform: left === '-50%' && !right ? 'translateX(-50%)' : 'none', // center horizontally only if left is 50%
+        width: '460px',       // size: tweak as desired
         height: '360px',
         pointerEvents: 'none',// don't block clicks on page content below
         zIndex: 200,          // above the global container box (100)
