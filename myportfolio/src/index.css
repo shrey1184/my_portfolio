@@ -187,3 +187,66 @@ body {
 .system-font {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif !important;
 }
+
+/* Full background container behind your hero content */
+.retro-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+
+  background:
+    radial-gradient(circle at 50% 10%,
+      #a900ff 0%,
+      #3b0063 30%,
+      #050016 70%,
+      #000 100%);
+
+  pointer-events: none; /* don't block clicks */
+}
+
+/* Sun */
+.retro-sun {
+  position: absolute;
+  width: 55vmin;
+  height: 55vmin;
+  border-radius: 50%;
+  top: 8vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at 50% 40%,
+    #ff45f9 0%,
+    #b300ff 45%,
+    #5e00a0 70%,
+    transparent 72%);
+  filter: blur(2px) drop-shadow(0 0 40px #d600ff);
+  opacity: 0.95;
+}
+
+/* Floor grid */
+.retro-grid {
+  position: absolute;
+  left: -20vw;
+  right: -20vw;
+  bottom: -5vh;
+  height: 70vh;
+
+  background-image:
+    linear-gradient(to right, rgba(0, 255, 230, 0.9) 1px, transparent 1px),
+    linear-gradient(to top,  rgba(0, 255, 230, 0.9) 1px, transparent 1px);
+  background-size: 80px 80px;
+
+  transform-origin: 50% 100%;
+  transform:
+    perspective(700px)
+    rotateX(72deg)
+    translateY(10vh);
+
+  box-shadow:
+    0 0 30px rgba(0, 255, 230, 0.8),
+    0 0 80px rgba(0, 255, 230, 0.5) inset;
+
+  opacity: 0.95;
+}
+
+/* Base style for both mountain sides */
