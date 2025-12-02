@@ -5,8 +5,8 @@ import imageRemoveBgPreview from '../assets/image-removebg-preview.png';
 import { ScrollBasedVelocityDemo } from './ui/scrollani';
 import { AsciiScene } from './ascii-scene';
 
-// Import video - adjust path as needed
-const videoPath = '/119967-719443875.mp4';
+// Import video - using alpha transparent video
+const videoPath = '/output_alpha.webm';
 
 export default function AboutSection() {
   return (
