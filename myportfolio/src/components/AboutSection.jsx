@@ -10,7 +10,13 @@ const videoPath = '/output_alpha.webm';
 
 export default function AboutSection() {
   return (
-    <section id="about" style={{ width: '100%', position: 'relative', background: 'transparent', padding: 0 }}>
+    <>
+      <style>{`
+        a:hover .linkedin-tooltip {
+          opacity: 1 !important;
+        }
+      `}</style>
+      <section id="about" style={{ width: '100%', position: 'relative', background: 'transparent', padding: 0 }}>
       {/* Scroll Animation - full width, top of About */}
       <div style={{ width: '100%', position: 'relative', zIndex: 10 }}>
         <ScrollBasedVelocityDemo />
@@ -51,21 +57,38 @@ export default function AboutSection() {
           </div>
 
           {/* Pixelated Canvas Box */}
-          <div style={{
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            borderRadius: '0.75rem',
-            padding: '0.75rem',
-            background: 'rgba(17, 18, 17, 0.4)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-            position: 'absolute',
-            top: '0%',
-            right: '20%',
-            zIndex: 2,
-          }}>
+          <a 
+            href="https://www.linkedin.com/in/shrey1184/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              borderRadius: '0.75rem',
+              padding: '0.75rem',
+              background: 'rgba(17, 18, 17, 0.4)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+              boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+              position: 'absolute',
+              top: '0%',
+              right: '20%',
+              zIndex: 2,
+              cursor: 'pointer',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.37)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(0, 0, 0, 0.37)';
+            }}
+            title="Connect with me on LinkedIn"
+          >
             <PixelatedCanvas
-              src={imageRemoveBgPreview}
+              src="/IMG-20251210-WA0006 (5).jpg"
               width={225}
               height={300}
               cellSize={4}
@@ -77,9 +100,30 @@ export default function AboutSection() {
               distortionStrength={3}
               distortionRadius={80}
               tintColor="#3b82f6"
-              tintStrength={0.3}
+              tintStrength={0.1}
             />
-          </div>
+            <div style={{
+              position: 'absolute',
+              bottom: '-40px',
+              left: '50%',
+              transform: 'translateY(-50%)',
+              border: '1px solid white',
+              background: 'rgba(0, 0, 0, 0.6)',
+              color: 'white',
+              padding: '0.5rem 1rem',
+              borderRadius: '0.5rem',
+              fontSize: '0.875rem',
+              fontFamily: 'StarCrush, sans-serif',
+              whiteSpace: 'nowrap',
+              opacity: 0,
+              pointerEvents: 'none',
+              transition: 'opacity 0.3s ease',
+            }}
+            className="linkedin-tooltip"
+            >
+             Find me on LinkedIn
+            </div>
+          </a>
 
           {/* About Content Box */}
           <div style={{
@@ -122,5 +166,6 @@ export default function AboutSection() {
       </div>
         </div>
       </section>
+    </>
   );
 }

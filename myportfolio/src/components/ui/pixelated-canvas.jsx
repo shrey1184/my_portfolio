@@ -3,7 +3,7 @@ import React from "react";
 // e.g. `import bg from "../../assets/image-removebg-preview.png";` or use the `src` prop / require() where needed
 
 export const PixelatedCanvas = ({
-  src = require("../../assets/pixelated-canvas-img.png"),
+  src = require("/home/shrey/Documents/Portfolio/myportfolio/public/IMG-20251210-WA0006 (5).jpg"),
   width = 400,
   height = 500,
   cellSize = 3,

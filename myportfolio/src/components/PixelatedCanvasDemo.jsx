@@ -5,13 +5,13 @@ export function PixelatedCanvasDemo() {
   return (
     <div className="mx-auto mt-8 flex w-full items-center justify-center">
       <PixelatedCanvas
-        src="/home/shrey/Documents/Portfolio/myportfolio/src/assets/_DSC1975.jpg"
+        src="/home/shrey/Documents/Portfolio/myportfolio/public/IMG-20251210-WA0006 (5).jpg"
         width={800}
         height={600}
         cellSize={4}
         dotScale={0.9}
         shape="square"
-        backgroundColor="#000000"
+        backgroundColor="#070709"
         dropoutStrength={0.1}
         interactive
         distortionStrength={0.1}

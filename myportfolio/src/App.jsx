@@ -37,7 +37,7 @@ function App() {
       </div>
 
       {/* Spaceship - positioned above everything */}
-      <SpaceshipSection />
+      {/*<SpaceshipSection />*/}
 
       <div className="App" style={{ position: 'relative', zIndex: 1 }}>
         {/* Global container box for entire content */}

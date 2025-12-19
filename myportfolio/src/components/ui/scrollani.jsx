@@ -1,13 +1,11 @@
 // Add demo component for AboutSection
 export function ScrollBasedVelocityDemo() {
 				return (
-					<div className="w-full flex justify-center items-center" style={{ position: 'relative', zIndex: 10, width: '100%' }}>
+					<div className="w-full flex justify-center items-center" style={{ position: 'relative', zIndex: 10 }}>
 						<div style={{
 							border: '1px solid rgba(255,255,255,0.2)',
 							borderRadius: '0.5rem',
-							background: 'rgba(17,18,17,0.4)',
-							backdropFilter: 'blur(10px)',
-							WebkitBackdropFilter: 'blur(10px)',
+							background: 'rgba(59, 130, 246, 0.01)',
 							boxShadow: '0 8px 32px 0 rgba(0,0,0,0.37)',
 							padding: '1.0rem 0rem',
 							width: '100%',
@@ -16,12 +14,9 @@ export function ScrollBasedVelocityDemo() {
 							overflow: 'hidden',
 						}}>
 							<div className="relative flex w-full flex-col items-center justify-center overflow-hidden" style={{ width: '100%' }}>
-								<ScrollVelocityContainer className="w-full text-xl font-bold tracking-tight md:text-3xl md:leading-10" style={{ color: 'rgba(255, 255, 255, 0.1)' }}>
+								<ScrollVelocityContainer className="w-full text-3xl font-bold tracking-tight md:text-3xl md:leading-10" style={{ color: 'rgba(59, 130, 246, 0.7)' }}>
 									<ScrollVelocityRow baseVelocity={20} direction={1}>
-										Design Develop Create Edit Render Optimize 
-									</ScrollVelocityRow>
-									<ScrollVelocityRow baseVelocity={20} direction={-1}>
-										Design Develop Create Edit Render Optimize
+										Design. Develop. Create. Edit. Render. Optimize. 
 									</ScrollVelocityRow>
 								</ScrollVelocityContainer>
 								<div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
