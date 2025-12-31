@@ -61,53 +61,54 @@ export default function ContactSection() {
   };
 
   return (
-    <div id="contact" style={{
-      minHeight: '100vh',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: '2rem',
-      position: 'relative',
-    }}>
-      <div style={{
-        border: '1px solid rgba(255, 255, 255, 0.2)',
-        borderRadius: '1.5rem',
-        padding: '3.5rem 5rem',
-        background: 'rgba(17, 18, 17, 0.4)',
-        backdropFilter: 'blur(10px)',
-        WebkitBackdropFilter: 'blur(10px)',
-        boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-        maxWidth: '900px',
-        width: '100%',
+    <>
+      <div id="contact" className="contact-section" style={{
+        minHeight: '85vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '6rem 2rem',
         position: 'relative',
-        zIndex: 2,
       }}>
-        <span className="system-font" style={{ 
-          fontSize: '1.5rem', 
-          fontWeight: '200', 
-          letterSpacing: '1px',
-          display: 'block',
-          marginBottom: '1rem'
+        <div className="contact-container" style={{
+          border: '1px solid rgba(255, 255, 255, 0.2)',
+          borderRadius: '1.5rem',
+          padding: '1.5rem 2rem',
+          background: 'rgba(17, 18, 17, 0.4)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+          maxWidth: '600px',
+          width: '100%',
+          position: 'relative',
+          zIndex: 2,
         }}>
-          contact
-        </span>
-        
-        <h2 style={{ 
-          fontSize: '4rem', 
-          fontWeight: '600', 
-          margin: '1rem 0 2rem 0', 
-          fontFamily: 'StarCrush, sans-serif',
-          background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 51, 234, 0.9) 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'}}>
-          Get In Touch
-        </h2>
+          <span className="system-font contact-label" style={{ 
+            fontSize: '1rem', 
+            fontWeight: '200', 
+            letterSpacing: '1px',
+            display: 'block',
+            marginBottom: '0.5rem'
+          }}>
+            contact
+          </span>
+          
+          <h2 className="contact-title" style={{ 
+            fontSize: '2.5rem', 
+            fontWeight: '600', 
+            margin: '0.25rem 0 0.75rem 0', 
+            fontFamily: 'StarCrush, sans-serif',
+            background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 51, 234, 0.9) 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'}}>
+            Get In Touch
+          </h2>
 
-        {/* Contact Form */}
-        <form ref={formRef} onSubmit={handleSubmit} style={{ marginTop: '2rem' }}>
+          {/* Contact Form */}
+          <form ref={formRef} onSubmit={handleSubmit} style={{ marginTop: '0.5rem' }}>
           {/* Name Field */}
-          <div style={{ marginBottom: '1.5rem' }}>
+          <div style={{ marginBottom: '1rem' }}>
             <label 
               htmlFor="name" 
               className="system-font"
@@ -156,7 +157,7 @@ export default function ContactSection() {
           </div>
 
           {/* Email Field */}
-          <div style={{ marginBottom: '1.5rem' }}>
+          <div style={{ marginBottom: '1rem' }}>
             <label 
               htmlFor="email"
               className="system-font"
@@ -205,7 +206,7 @@ export default function ContactSection() {
           </div>
 
           {/* Subject Field */}
-          <div style={{ marginBottom: '1.5rem' }}>
+          <div style={{ marginBottom: '1rem' }}>
             <label 
               htmlFor="subject"
               className="system-font"
@@ -254,7 +255,7 @@ export default function ContactSection() {
           </div>
 
           {/* Message Field */}
-          <div style={{ marginBottom: '1.5rem' }}>
+          <div style={{ marginBottom: '1rem' }}>
             <label 
               htmlFor="message"
               className="system-font"
@@ -274,7 +275,7 @@ export default function ContactSection() {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="6"
+              rows="4"
               placeholder="Tell me about your project or inquiry..."
               style={{
                 width: '100%',
@@ -370,8 +371,8 @@ export default function ContactSection() {
 
         {/* Additional Contact Info */}
         <div style={{ 
-          marginTop: '2rem', 
-          paddingTop: '2rem',
+          marginTop: '1rem', 
+          paddingTop: '1rem',
           borderTop: '1px solid rgba(255, 255, 255, 0.1)',
           textAlign: 'center',
           fontFamily: 'StarCrush, sans-serif',
@@ -380,7 +381,7 @@ export default function ContactSection() {
         }}>
           Prefer email directly? Reach out at{' '}
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:shreyshrivastava11@gmail.com"
             style={{
               color: '#3b82f6',
               textDecoration: 'none',
@@ -389,17 +390,56 @@ export default function ContactSection() {
             onMouseEnter={(e) => e.target.style.color = '#60a5fa'}
             onMouseLeave={(e) => e.target.style.color = '#3b82f6'}
           >
-            your-email@example.com
+            shreyshrivastava11@gmail.com
           </a>
         </div>
       </div>
+    </div>
 
       {/* CSS for spinner animation */}
       <style>{`
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
+
+        /* Responsive Contact Section */
+        @media (max-width: 768px) {
+          .contact-section {
+            padding: 1rem !important;
+          }
+          
+          .contact-container {
+            padding: 2rem 1.5rem !important;
+            border-radius: 1rem !important;
+          }
+          
+          .contact-label {
+            font-size: 1rem !important;
+          }
+          
+          .contact-title {
+            font-size: 2.5rem !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .contact-section {
+            padding: 0.5rem !important;
+          }
+          
+          .contact-container {
+            padding: 1.5rem 1rem !important;
+          }
+          
+          .contact-label {
+            font-size: 0.875rem !important;
+          }
+          
+          .contact-title {
+            font-size: 2rem !important;
+          }
+        }
       `}</style>
-    </div>
+    </>
   );
 }

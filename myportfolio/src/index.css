@@ -26,10 +26,13 @@ body {
   background-color: #000000;
   color: #ffffff;
   font-family: "StarCrush", system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 #root {
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Navbar Styles */
@@ -58,6 +61,24 @@ body {
   transform: translateX(-50%);
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+    height: 50px;
+  }
+  
+  .navbar-brand {
+    position: static;
+    transform: none;
+    font-size: 1rem;
+  }
+  
+  .navbar-controls {
+    gap: 0.5rem;
+  }
 }
 
 .brand-shrey {
@@ -136,6 +157,13 @@ body {
   color: #3b82f6;
 }
 
+/* Hide sidebar on mobile and tablet */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .bottom-bar {
   position: fixed;
   bottom: 0;
@@ -153,6 +181,13 @@ body {
   z-index: 1000;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+/* Responsive bottom bar */
+@media (max-width: 768px) {
+  .bottom-bar {
+    height: 50px;
+  }
 }
 
 .search-btn {
@@ -185,7 +220,7 @@ body {
 
 /* Exception class for non-StarCrush font */
 .system-font {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+  font-family: "StarCrush", sans-serif !important;
 }
 
 /* Full background container behind your hero content */

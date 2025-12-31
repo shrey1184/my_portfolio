@@ -13,6 +13,7 @@ html {
 
 body {
   background-color: #000000;
+  overflow-x: hidden;
 }
 
 main {
@@ -26,4 +27,23 @@ h1 {
 
 p {
   color: #cccccc;
+}
+
+/* Responsive App Container */
+@media (max-width: 1024px) {
+  .App {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
 }

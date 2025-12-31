@@ -41,7 +41,7 @@ function App() {
 
       <div className="App" style={{ position: 'relative', zIndex: 1 }}>
         {/* Global container box for entire content */}
-        <div style={{
+        <div className="global-border-desktop" style={{
           position: 'fixed',
           top: '42px',
           left: '42px',
@@ -66,6 +66,15 @@ function App() {
         <ContactFAB />
         <BottomBar />
       </div>
+
+      <style>{`
+        /* Hide desktop border on mobile/tablet */
+        @media (max-width: 1024px) {
+          .global-border-desktop {
+            display: none;
+          }
+        }
+      `}</style>
     </>
   );
 }

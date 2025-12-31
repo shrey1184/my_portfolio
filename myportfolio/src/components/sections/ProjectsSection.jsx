@@ -174,7 +174,7 @@ function ProjectCard({ project }) {
 			</div>
 
 			{/* Links */}
-			<div style={{ display: 'flex', gap: '1rem', marginTop: 'auto' }}>
+			<div style={{ display: 'flex', gap: '1rem', marginTop: 'auto', flexWrap: 'wrap' }}>
 				<a 
 					href={project.github}
 					target="_blank"
@@ -368,75 +368,134 @@ function ScrollVelocityRow({ children, baseVelocity = 1, direction = 1, classNam
 
 export default function ProjectsSection() {
 	return (
-		<section 
-			id="projects" 
-			style={{
-				minHeight: '100vh',
-				padding: '4rem 2rem',
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				justifyContent: 'center',
-				gap: '3rem',
-				position: 'relative',
-			}}
-		>
-			{/* Section Title */}
-			<div style={{ textAlign: 'center', zIndex: 10 }}>
-				<h2 
-					style={{
-						fontSize: '3rem',
-						fontWeight: 'bold',
-						background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 51, 234, 0.9) 100%)',
-						WebkitBackgroundClip: 'text',
-						WebkitTextFillColor: 'transparent',
-						backgroundClip: 'text',
-						marginBottom: '1rem',
-					}}
-				>
-					Featured Projects
-				</h2>
-				<p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '1.1rem' }}>
-					Explore my latest work and contributions
-				</p>
-			</div>
+		<>
+			<section 
+				id="projects" 
+				className="projects-section"
+				style={{
+					minHeight: '100vh',
+					padding: '4rem 2rem',
+					display: 'flex',
+					flexDirection: 'column',
+					alignItems: 'center',
+					justifyContent: 'center',
+					gap: '3rem',
+					position: 'relative',
+				}}
+			>
+				{/* Section Title */}
+				<div style={{ textAlign: 'center', zIndex: 10 }}>
+					<h2 
+						className="projects-title"
+						style={{
+							fontSize: '3rem',
+							fontWeight: 'bold',
+							background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 51, 234, 0.9) 100%)',
+							WebkitBackgroundClip: 'text',
+							WebkitTextFillColor: 'transparent',
+							backgroundClip: 'text',
+							marginBottom: '1rem',
+						}}
+					>
+						Featured Projects
+					</h2>
+					<p className="projects-subtitle" style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '1.1rem' }}>
+						Explore my latest work and contributions
+					</p>
+				</div>
 
-			{/* Scrolling Projects Container */}
-			<div style={{ width: '100%', position: 'relative', zIndex: 10 }}>
-				<ScrollVelocityContainer className="w-full">
-					<ScrollVelocityRow baseVelocity={10} direction={1}>
-						{projects.map((project) => (
-							<ProjectCard key={project.id} project={project} />
-						))}
-					</ScrollVelocityRow>
-				</ScrollVelocityContainer>
+				{/* Scrolling Projects Container */}
+				<div style={{ width: '100%', position: 'relative', zIndex: 10 }}>
+					<ScrollVelocityContainer className="w-full">
+						<ScrollVelocityRow baseVelocity={10} direction={1}>
+							{projects.map((project) => (
+								<ProjectCard key={project.id} project={project} />
+							))}
+						</ScrollVelocityRow>
+					</ScrollVelocityContainer>
 
-				{/* Gradient overlays for fade effect */}
-				<div 
-					style={{
-						position: 'absolute',
-						top: 0,
-						left: 0,
-						width: '200px',
-						height: '100%',
-						background: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
-						pointerEvents: 'none',
-						zIndex: 20,
-					}}
-				/>
-				<div 
-					style={{
-						position: 'absolute',
-						top: 0,
-						right: 0,
-						width: '200px',
-						height: '100%',
-						background: 'linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
-						pointerEvents: 'none',
-						zIndex: 20,
-					}}
-				/>
-			</div>
-		</section>
+					{/* Gradient overlays for fade effect */}
+					<div 
+						className="project-gradient-left"
+						style={{
+							position: 'absolute',
+							top: 0,
+							left: 0,
+							width: '200px',
+							height: '100%',
+							background: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+							pointerEvents: 'none',
+							zIndex: 20,
+						}}
+					/>
+					<div 
+						className="project-gradient-right"
+						style={{
+							position: 'absolute',
+							top: 0,
+							right: 0,
+							width: '200px',
+							height: '100%',
+							background: 'linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+							pointerEvents: 'none',
+							zIndex: 20,
+						}}
+					/>
+				</div>
+			</section>
+
+			<style>{`
+				/* Responsive Projects Section */
+				@media (max-width: 768px) {
+					.projects-section {
+						padding: 2rem 1rem !important;
+					}
+					
+					.projects-title {
+						font-size: 2rem !important;
+					}
+					
+					.projects-subtitle {
+						font-size: 0.9rem !important;
+					}
+					
+					.project-card {
+						min-width: 300px !important;
+						max-width: 300px !important;
+						height: auto !important;
+						min-height: 450px !important;
+						margin: 0 1rem !important;
+						padding: 1.5rem !important;
+					}
+					
+					.project-gradient-left,
+					.project-gradient-right {
+						width: 100px !important;
+					}
+				}
+
+				@media (max-width: 480px) {
+					.projects-section {
+						padding: 1.5rem 0.5rem !important;
+						gap: 2rem !important;
+					}
+					
+					.projects-title {
+						font-size: 1.75rem !important;
+					}
+					
+					.project-card {
+						min-width: 260px !important;
+						max-width: 260px !important;
+						padding: 1rem !important;
+					}
+					
+					.project-gradient-left,
+					.project-gradient-right {
+						width: 50px !important;
+					}
+				}
+			`}</style>
+		</>
 	)
 }
