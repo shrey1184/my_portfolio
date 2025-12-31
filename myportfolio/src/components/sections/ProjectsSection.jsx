@@ -27,7 +27,7 @@ const projects = [
 		description: "Modular Offline Data Collection Toolkit for Panchayats. Offline-first web application for rural Panchayat survey data collection with automatic sync.",
 		tech: ["React", "FastAPI", "PostgreSQL", "IndexedDB"],
 		github: "https://github.com/namanxdev/Sampark",
-		image: null,
+		image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop&q=80",
 		link: "https://sampark-delta.vercel.app/"
 	},
 	{
@@ -36,7 +36,7 @@ const projects = [
 		description: "A tile-based 2D adventure game built with Java Swing featuring smooth player movement, sprite animations, and collision detection in a 50x50 tile world.",
 		tech: ["Java", "Swing", "Game Development"],
 		github: "https://github.com/shrey1184/2D-adventure",
-		image: null,
+		image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop&q=80",
 		link: null
 	},
 	{
@@ -45,7 +45,7 @@ const projects = [
 		description: "LSTM-based ML model for climate anomaly prediction using NASA POWER data. Predicts temperature and precipitation anomalies with high accuracy.",
 		tech: ["Python", "TensorFlow", "LSTM", "NASA API"],
 		github: "https://github.com/shrey1184/nasa-ml-model",
-		image: null,
+		image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=800&h=600&fit=crop&q=80",
 		link: null
 	},
 	{
@@ -54,7 +54,7 @@ const projects = [
 		description: "Personal portfolio website showcasing projects, skills, and experience with modern animations and 3D elements.",
 		tech: ["React", "Vite", "Three.js", "Framer Motion"],
 		github: "https://github.com/shrey1184/my_portfolio",
-		image: null,
+		image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
 		link: null
 	},
 	{
@@ -63,7 +63,7 @@ const projects = [
 		description: "Multi-agent loan application system with LangGraph workflow. Features 6 decision agents for automated KYC, credit assessment, and sanction letter generation.",
 		tech: ["FastAPI", "LangGraph", "PostgreSQL", "Next.js"],
 		github: "https://github.com/shrey1184/ey-folder",
-		image: null,
+		image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop&q=80",
 		link: null
 	},
 	{
@@ -72,7 +72,7 @@ const projects = [
 		description: "Data ingestion pipeline for metro systems with ML-based predictive analytics for passenger flow and maintenance scheduling.",
 		tech: ["TypeScript", "Python", "Jupyter", "FastAPI"],
 		github: "https://github.com/shrey1184/metrokochi-dataingestion",
-		image: null,
+		image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=600&fit=crop&q=80",
 		link: null
 	}
 ]
