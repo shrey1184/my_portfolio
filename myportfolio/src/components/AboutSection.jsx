@@ -3,10 +3,6 @@ import { PixelatedCanvas } from './ui/pixelated-canvas';
 import { PixelatedCanvasDemo } from './PixelatedCanvasDemo';
 import imageRemoveBgPreview from '../assets/image-removebg-preview.png';
 import { ScrollBasedVelocityDemo } from './ui/scrollani';
-import { AsciiScene } from './ascii-scene';
-
-// Import video - using alpha transparent video
-const videoPath = '/output_alpha.webm';
 
 export default function AboutSection() {
   return (
@@ -21,17 +17,6 @@ export default function AboutSection() {
           .about-container {
             flex-direction: column !important;
             padding: 1rem !important;
-          }
-          
-          .ascii-scene-box {
-            position: relative !important;
-            top: 0 !important;
-            left: 0 !important;
-            transform: none !important;
-            width: 100% !important;
-            max-width: 600px !important;
-            height: 400px !important;
-            margin: 0 auto 1rem auto !important;
           }
           
           .pixelated-canvas-box {
@@ -60,11 +45,6 @@ export default function AboutSection() {
             font-size: 1rem !important;
           }
           
-          .ascii-scene-box {
-            height: 300px !important;
-            max-width: 400px !important;
-          }
-          
           .pixelated-canvas-box {
             top: -40px !important;
             right: -25px !important;
@@ -81,29 +61,21 @@ export default function AboutSection() {
           }
           
           .about-content-box h2 {
-            top: -20px !important;
-            right: -20px !important;
-          }
-          
-          .pixelated-canvas-box a > div {
-            transform: scale(0.7ortant;
+            font-size: 2rem !important;
           }
           
           .about-content-box p {
             font-size: 0.875rem !important;
             line-height: 1.6 !important;
           }
-                    .pixelated-canvas-box {
+          
+          .pixelated-canvas-box {
             top: -35px !important;
             right: -20px !important;
           }
-                    .pixelated-canvas-box a > div {
-            transform: scale(0.8);
-          }
           
-          .ascii-scene-box {
-            height: 250px !important;
-            max-width: 300px !important;
+          .pixelated-canvas-box a > div {
+            transform: scale(0.7);
           }
           
           .linkedin-tooltip {
@@ -134,23 +106,7 @@ export default function AboutSection() {
           width: '100%',
           maxWidth: '1400px',
         }}>
-          {/* ASCII Scene Box - LEFT SIDE */}
-          <div className="ascii-scene-box" style={{
-            position: 'absolute',
-            top: '50%',
-            left: '-5%',
-            transform: 'translateY(-50%)',
-            width: '800px',
-            height: '800px',
-            zIndex: 0,
-            background: 'transparent',
-            mixBlendMode: 'screen',
-            pointerEvents: 'none',
-          }}>
-            <AsciiScene videoSrc={videoPath} />
-          </div>
-
-          {/* About Content Box - CENTERED */}
+          {/* About Content Box - CENTERED */
           <div className="about-content-box" style={{
             border: '1px solid rgba(255, 255, 255, 0.2)',
             borderRadius: '1.5rem',
@@ -236,32 +192,33 @@ export default function AboutSection() {
             </a>
           </div>
 
-            <h2 style={{ 
-              fontSize: '4rem', 
-              fontWeight: '600', 
-              margin: '1rem 0', 
-              fontFamily: 'StarCrush, sans-serif',
-              color: '#3b82f6'
-            }}>
-              About Me
-            </h2>
+          <h2 style={{ 
+            fontSize: '4rem', 
+            fontWeight: '600', 
+            margin: '1rem 0', 
+            fontFamily: 'StarCrush, sans-serif',
+            color: '#3b82f6'
+          }}>
+            About Me
+          </h2>
 
-            {/* Add your content here */}
-            <p style={{ 
-              fontSize: '1.25rem', 
-              fontWeight: '300', 
-              lineHeight: '1.8',
-              fontFamily: 'StarCrush, sans-serif',
-              color: '#ffffff'
-            }}>
-              <span style={{ color: '#9ca3af' }}>1.</span> Nice to meet you! I'm <span style={{ color: 'green' }}>Shrey.</span><br />
-              <span style={{ color: '#9ca3af' }}>2.</span> I'm passionate about <span style={{ color: 'red' }}>Machine learning.</span>and <span style={{ color: 'yellow' }}>Artificial intelligence.</span>, with a particular focus on deep learning and natural language processing. I love exploring new technologies and applying them to solve real-world problems.<br />
-              <span style={{ color: '#9ca3af' }}>3.</span> Coding for me is not just my work, i like experimenting with many technologies and i also maintain some personal projects that showcase my skills and creativity.<br />
-              <span style={{ color: '#9ca3af' }}>4.</span> I like solving complex real world problems and participating in hackathons and coding competitions to challenge myself and improve my skills.
-            </p>
-          </div>
+          {/* Add your content here */}
+          <p style={{ 
+            fontSize: '1.25rem', 
+            fontWeight: '300', 
+            lineHeight: '1.8',
+            fontFamily: 'StarCrush, sans-serif',
+            color: '#ffffff'
+          }}>
+            <span style={{ color: '#9ca3af' }}>1.</span> Nice to meet you! I'm <span style={{ color: 'green' }}>Shrey.</span><br />
+            <span style={{ color: '#9ca3af' }}>2.</span> I'm passionate about <span style={{ color: 'red' }}>Machine learning.</span>and <span style={{ color: 'yellow' }}>Artificial intelligence.</span>, with a particular focus on deep learning and natural language processing. I love exploring new technologies and applying them to solve real-world problems.<br />
+            <span style={{ color: '#9ca3af' }}>3.</span> Coding for me is not just my work, i like experimenting with many technologies and i also maintain some personal projects that showcase my skills and creativity.<br />
+            <span style={{ color: '#9ca3af' }}>4.</span> I like solving complex real world problems and participating in hackathons and coding competitions to challenge myself and improve my skills.
+          </p>
         </div>
-        </div>
+        }
+      </div>
+      </div>
       </section>
     </>
   );
