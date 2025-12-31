@@ -1,6 +1,6 @@
 export function AnimatedSun() {
   return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" style={{ transform: 'translateY(0px)' }}>
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none sun-container" style={{ transform: 'translateY(0px)' }}>
       <div className="relative w-[750px] h-[750px] opacity-70">
 
         {/* Glowing Circle */}
@@ -18,6 +18,19 @@ export function AnimatedSun() {
         "></div>
 
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .sun-container {
+            transform: translateY(150px) !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .sun-container {
+            transform: translateY(150px) !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
