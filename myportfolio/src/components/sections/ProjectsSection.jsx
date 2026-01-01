@@ -385,10 +385,10 @@ export default function ProjectsSection() {
 			>
 				{/* Section Title */}
 				<div style={{ textAlign: 'center', zIndex: 10 }}>
-					<h2 
+					<h2
 						className="projects-title"
 						style={{
-							fontSize: '3rem',
+							fontSize: '4.5em',
 							fontWeight: 'bold',
 							background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 51, 234, 0.9) 100%)',
 							WebkitBackgroundClip: 'text',
@@ -456,7 +456,7 @@ export default function ProjectsSection() {
 					}
 					
 					.projects-subtitle {
-						font-size: 0.9rem !important;
+						font-size: 1.2rem !important;
 					}
 					
 					.project-card {
@@ -481,7 +481,7 @@ export default function ProjectsSection() {
 					}
 					
 					.projects-title {
-						font-size: 1.75rem !important;
+						font-size: 3.2rem !important;
 					}
 					
 					.project-card {

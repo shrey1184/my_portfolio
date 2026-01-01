@@ -65,12 +65,12 @@ export default function AboutSection() {
           }
           
           .about-content-box p {
-            font-size: 0.875rem !important;
+            font-size: 1rem !important;
             line-height: 1.6 !important;
           }
           
           .pixelated-canvas-box {
-            top: -35px !important;
+            top: -275px !important;
             right: -20px !important;
           }
           
