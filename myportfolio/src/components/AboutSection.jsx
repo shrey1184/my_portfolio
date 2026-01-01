@@ -35,6 +35,7 @@ export default function AboutSection() {
           .about-content-box {
             padding: 2rem 1.5rem !important;
             border-radius: 1rem !important;
+            margin-top: 3rem !important;
           }
           
           .about-content-box h2 {
@@ -58,6 +59,7 @@ export default function AboutSection() {
         @media (max-width: 480px) {
           .about-content-box {
             padding: 1.5rem 1rem !important;
+            margin-top: 7rem !important;
           }
           
           .about-content-box h2 {
