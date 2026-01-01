@@ -59,7 +59,7 @@ export default function AboutSection() {
         @media (max-width: 480px) {
           .about-content-box {
             padding: 1.5rem 1rem !important;
-            margin-top: 7rem !important;
+            margin-top: 20rem !important;
           }
           
           .about-content-box h2 {
