@@ -63,15 +63,6 @@ export default function AchievementsSection() {
           maxWidth: '1200px',
           width: '90%',
         }}>
-          <span className="system-font achievements-label" style={{ 
-            fontSize: '1.5rem', 
-            fontWeight: '200', 
-            marginBottom: '1rem', 
-            letterSpacing: '1px',
-            display: 'block'
-          }}>
-            achievements
-          </span>
           
           <h2 className="achievements-title" style={{ 
             fontSize: '4rem', 

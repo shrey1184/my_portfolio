@@ -83,15 +83,6 @@ export default function ContactSection() {
           position: 'relative',
           zIndex: 2,
         }}>
-          <span className="system-font contact-label" style={{ 
-            fontSize: '1rem', 
-            fontWeight: '200', 
-            letterSpacing: '1px',
-            display: 'block',
-            marginBottom: '0.5rem'
-          }}>
-            contact
-          </span>
           
           <h2 className="contact-title" style={{ 
             fontSize: '2.5rem', 
